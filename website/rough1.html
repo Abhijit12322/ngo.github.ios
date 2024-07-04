@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    top: -100px; /* Initial position off-screen */
+    animation: slideDown 1s forwards;
+}
+
+@keyframes slideDown {
+    to {
+        top: 0;
+    }
+}
+
+main {
+    margin-top: 100px; /* Adjust based on header height */
+    padding: 20px;
+}
+</style>
+<body>
+    <header id="animated-header">
+        <h1>Welcome to My Website</h1>
+    </header>
+    <main>
+        <p>This is the main content of the website.</p>
+    </main>
+</body>
+</html>
